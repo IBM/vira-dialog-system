@@ -4,6 +4,7 @@
 #
 
 import os
+import json
 
 import requests
 
@@ -24,4 +25,4 @@ data = {
     'text': "Can children get the vaccine?"
 }
 response = requests.post("http://0.0.0.0:8100/dialog/en", headers=headers, json=data)
-print(response.json())
+print(json.dumps(response.json(), indent=4))

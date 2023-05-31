@@ -8,6 +8,7 @@ import logging.config
 import os
 from typing import Optional, Union, Any
 
+import uvicorn
 from fastapi import FastAPI, Depends, Request, HTTPException, status as fastapi_status
 from fastapi.security import OAuth2PasswordBearer
 from pydantic import BaseModel
@@ -17,10 +18,9 @@ from components.dialog_manager import DialogManager
 from tools.db_manager import DBManager
 from tools.service_utils import check_input_text, check_session_id, verify_bool_feedback, verify_int_feedback, \
     verify_message_id
-import uvicorn
 
 logging_config_file = os.path.join('resources', 'logging.conf')
-logging.config.fileConfig(logging_config_file)
+logging.config.fileConfig(logging_config_file, disable_existing_loggers=False)
 
 log = logging.getLogger('main')
 
@@ -37,6 +37,8 @@ VIRA_API_KEY = os.environ['VIRA_API_KEY']
 language_codes = DBManager().read_configuration().get_language_codes()
 
 dialog_manager = DialogManager()
+
+log.info("Service initialization is complete")
 
 
 class MessageRequest(BaseModel):
