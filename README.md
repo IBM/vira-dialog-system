@@ -40,11 +40,11 @@ python db_utils.py -conf-canned-db
 ```
 
 ## Testing VIRA
-To launch VIRA in your local environment, run
+To launch VIRA in your local environment, set 'VIRA_API_KEY' to contain an API key, and run
 ```shell
 python main.py
 ```
-To test VIRA with a simple question, set the environment variable 'VIRA_API_KEY' that should contain the API key required to access VIRA, and run
+To test VIRA with a simple question, set the environment variable 'VIRA_API_KEY' that should contain the API key set launching VIRA, and run
 ```shell
 python sanity.py
 ```
