@@ -1,0 +1,1115 @@
+{
+  "watson_translator": {
+    "en": {
+      "enabled": false,
+      "model_id": "",
+      "base_model_id": ""
+    },
+    "es": {
+      "enabled": true,
+      "model_id": "es-en",
+      "base_model_id": "es-en"
+    },
+    "he": {
+      "enabled": true,
+      "model_id": "2d72655d-b150-4510-8e19-78fed2b189d4",
+      "base_model_id": "he-en"
+    },
+    "en_auntb": {
+      "enabled": false,
+      "model_id": "",
+      "base_model_id": ""
+    },
+    "fr_auntb": {
+      "enabled": true,
+      "model_id": "fr-CA-en",
+      "base_model_id": "fr-CA-en"
+    },
+    "en_nc": {
+      "enabled": false,
+      "model_id": "",
+      "base_model_id": ""
+    },
+    "en_ca": {
+      "enabled": false,
+      "model_id": "",
+      "base_model_id": ""
+    },
+    "en_ma": {
+      "enabled": false,
+      "model_id": "",
+      "base_model_id": ""
+    },
+    "en_fc": {
+      "enabled": false,
+      "model_id": "",
+      "base_model_id": ""
+    },
+    "es_nc": {
+      "enabled": true,
+      "model_id": "es-en",
+      "base_model_id": "es-en"
+    },
+    "es_ca": {
+      "enabled": true,
+      "model_id": "es-en",
+      "base_model_id": "es-en"
+    },
+    "es_ma": {
+      "enabled": true,
+      "model_id": "es-en",
+      "base_model_id": "es-en"
+    },
+    "es_fc": {
+       "enabled": true,
+       "model_id": "es-en",
+       "base_model_id": "es-en"
+    },
+    "en_sa": {
+      "enabled": false,
+      "model_id": "",
+      "base_model_id": ""
+    },
+    "es_sa": {
+       "enabled": true,
+       "model_id": "es-en",
+       "base_model_id": "es-en"
+     }
+  },
+  "languages": {
+    "en": {
+      "name": "English",
+      "direction": "ltr",
+      "default": true,
+      "ui_texts": {
+        "FEEDBACK_REQUEST_SELECTED_KP": "How was my answer?",
+        "FEEDBACK_REQUEST_ALT_KP": "I see. Does one of these suggestions better match your original input?",
+        "FEEDBACK_REQUEST_NO_KP": "Does one of these suggestions better match your original input?",
+        "BOT_IS_TYPING": "Bot is typing...",
+        "ENTER_TEXT_HERE": "Enter your text here...",
+        "SUBMIT_TEXT": "Submit",
+        "MAIN_TITLE": "Covid-19 Vaccine Dialog System"
+      },
+      "feedback_options": [
+        {
+          "text": "I didn't ask a question",
+          "intent_label": "FEEDBACK_NO_CONCERN",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": "None of the above",
+          "intent_label": "FEEDBACK_NONE_OF_KPS",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": ".*",
+          "intent_label": "FEEDBACK_NEW_KP",
+          "candidate": false,
+          "kp": true,
+          "location_specific": false
+        }
+      ],
+      "opening_survey": {
+        "enabled": true,
+        "questions": {
+          "WHAT_BROUGHT_YOU_HERE": {
+            "question": "Thanks for joining! Please note that VIRA chatbot is designed for people in the U.S.\nBefore we get started, please select what brought you here today.",
+            "choices": [
+              "I came to find information about COVID-19 vaccines.",
+              "I'm looking for resources to share with others.",
+              "I'm concerned about the vaccine.",
+              "I'm curious about this chatbot.",
+              "None of the above."
+            ]
+          }
+        },
+        "flows": {
+          "skip": [],
+          "default": ["WHAT_BROUGHT_YOU_HERE"]
+        },
+        "default_flow": "default",
+        "survey_closing_intent": "SURVEY_CLOSING",
+        "post_survey_intro_intent": "INTRO_DISCUSSION_AFTER_SURVEY"
+      }
+    },
+    "es": {
+      "name": "Spanish",
+      "direction": "ltr",
+      "ui_texts": {
+        "FEEDBACK_REQUEST_SELECTED_KP": "¿Cómo estuvo mi respuesta?",
+        "FEEDBACK_REQUEST_ALT_KP": "Ya veo. ¿Alguna de estas sugerencias se corresponde mejor con su aporte original?",
+        "FEEDBACK_REQUEST_NO_KP": "¿Alguna de estas sugerencias se corresponde mejor con su aporte original?",
+        "BOT_IS_TYPING": "Bot is typing...",
+        "ENTER_TEXT_HERE": "Enter your text here...",
+        "SUBMIT_TEXT": "Submit",
+        "MAIN_TITLE": "Covid-19 Vaccine Dialog System"
+      },
+      "feedback_options": [
+        {
+          "text": "No hice ninguna pregunta",
+          "intent_label": "FEEDBACK_NO_CONCERN",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": "Ninguna de las anteriores",
+          "intent_label": "FEEDBACK_NONE_OF_KPS",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": ".*",
+          "intent_label": "FEEDBACK_NEW_KP",
+          "candidate": false,
+          "kp": true,
+          "location_specific": false
+        }
+      ],
+      "opening_survey": {
+        "enabled": true,
+        "questions": {
+          "WHAT_BROUGHT_YOU_HERE": {
+            "question": "¡Gracias por acompañarnos! Por favor, tomen en cuenta que el chatbot VIRA está diseñado para personas en los EE.UU.\nAntes de comenzar, por favor, seleccione la razón por la que ha venido hoy.",
+            "choices": [
+              "Vine a encontrar información acerca de las vacunas contra el COVID-19.",
+              "Busco recursos para compartir con otros.",
+              "Estoy preocupado por la vacuna.",
+              "Tengo curiosidad acerca de este chatbot.",
+              "Ninguno de los anteriores."
+            ]
+          }
+        },
+        "flows": {
+          "skip": [],
+          "default": ["WHAT_BROUGHT_YOU_HERE"]
+        },
+        "default_flow": "default",
+        "survey_closing_intent": "SURVEY_CLOSING",
+        "post_survey_intro_intent": "INTRO_DISCUSSION_AFTER_SURVEY"
+      }
+    },
+    "en_auntb": {
+      "name": "English",
+      "direction": "ltr",
+      "default": false,
+      "ui_texts": {
+        "FEEDBACK_REQUEST_SELECTED_KP": "How was my answer?",
+        "FEEDBACK_REQUEST_ALT_KP": "I see. Does one of these suggestions better match your original input?",
+        "FEEDBACK_REQUEST_NO_KP": "Does one of these suggestions better match your original input?",
+        "BOT_IS_TYPING": "Bot is typing...",
+        "ENTER_TEXT_HERE": "Enter your text here...",
+        "SUBMIT_TEXT": "Submit",
+        "MAIN_TITLE": "Covid-19 Vaccine Dialog System"
+      },
+      "feedback_options": [
+        {
+          "text": "I didn't ask a question",
+          "intent_label": "FEEDBACK_NO_CONCERN",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": "None of the above",
+          "intent_label": "FEEDBACK_NONE_OF_KPS",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": ".*",
+          "intent_label": "FEEDBACK_NEW_KP",
+          "candidate": false,
+          "kp": true,
+          "location_specific": false
+        }
+      ],
+      "opening_survey": {
+        "enabled": true,
+        "questions": {
+          "WHAT_BROUGHT_YOU_HERE": {
+            "question": "Thanks for joining! Please note that VIRA chatbot is designed for people in the U.S.\nBefore we get started, please select what brought you here today.",
+            "choices": [
+              "I came to find information about COVID-19 vaccines.",
+              "I'm looking for resources to share with others.",
+              "I'm concerned about the vaccine.",
+              "I'm curious about this chatbot.",
+              "None of the above."
+            ]
+          }
+        },
+        "flows": {
+          "skip": [],
+          "default": ["WHAT_BROUGHT_YOU_HERE"]
+        },
+        "default_flow": "default",
+        "survey_closing_intent": "SURVEY_CLOSING",
+        "post_survey_intro_intent": "INTRO_DISCUSSION_AFTER_SURVEY"
+      }
+    },
+    "fr_auntb": {
+      "name": "French_AuntB",
+      "direction": "ltr",
+      "default": false,
+      "ui_texts": {
+        "FEEDBACK_REQUEST_SELECTED_KP": "How was my answer?",
+        "FEEDBACK_REQUEST_ALT_KP": "I see. Does one of these suggestions better match your original input?",
+        "FEEDBACK_REQUEST_NO_KP": "Does one of these suggestions better match your original input?",
+        "BOT_IS_TYPING": "Bot is typing...",
+        "ENTER_TEXT_HERE": "Enter your text here...",
+        "SUBMIT_TEXT": "Submit",
+        "MAIN_TITLE": "Covid-19 Vaccine Dialog System"
+      },
+      "feedback_options": [
+        {
+          "text": "I didn't ask a question",
+          "intent_label": "FEEDBACK_NO_CONCERN",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": "None of the above",
+          "intent_label": "FEEDBACK_NONE_OF_KPS",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": ".*",
+          "intent_label": "FEEDBACK_NEW_KP",
+          "candidate": false,
+          "kp": true,
+          "location_specific": false
+        }
+      ],
+      "opening_survey": {
+        "enabled": true,
+        "questions": {
+          "WHAT_BROUGHT_YOU_HERE": {
+            "question": "Thanks for joining! Please note that VIRA chatbot is designed for people in the U.S.\nBefore we get started, please select what brought you here today.",
+            "choices": [
+              "I came to find information about COVID-19 vaccines.",
+              "I'm looking for resources to share with others.",
+              "I'm concerned about the vaccine.",
+              "I'm curious about this chatbot.",
+              "None of the above."
+            ]
+          }
+        },
+        "flows": {
+          "skip": [],
+          "default": ["WHAT_BROUGHT_YOU_HERE"]
+        },
+        "default_flow": "default",
+        "survey_closing_intent": "SURVEY_CLOSING",
+        "post_survey_intro_intent": "INTRO_DISCUSSION_AFTER_SURVEY"
+      }
+    },
+    "en_nc": {
+      "name": "English",
+      "direction": "ltr",
+      "default": true,
+      "ui_texts": {
+        "FEEDBACK_REQUEST_SELECTED_KP": "How was my answer?",
+        "FEEDBACK_REQUEST_ALT_KP": "I see. Does one of these suggestions better match your original input?",
+        "FEEDBACK_REQUEST_NO_KP": "Does one of these suggestions better match your original input?",
+        "BOT_IS_TYPING": "Bot is typing...",
+        "ENTER_TEXT_HERE": "Enter your text here...",
+        "SUBMIT_TEXT": "Submit",
+        "MAIN_TITLE": "Covid-19 Vaccine Dialog System"
+      },
+      "feedback_options": [
+        {
+          "text": "I didn't ask a question",
+          "intent_label": "FEEDBACK_NO_CONCERN",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": "None of the above",
+          "intent_label": "FEEDBACK_NONE_OF_KPS",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": ".*",
+          "intent_label": "FEEDBACK_NEW_KP",
+          "candidate": false,
+          "kp": true,
+          "location_specific": false
+        }
+      ],
+      "opening_survey": {
+        "enabled": true,
+        "questions": {
+          "WHAT_BROUGHT_YOU_HERE": {
+            "question": "Thanks for joining! Please note that VIRA chatbot is designed for people in the U.S.\nBefore we get started, please select what brought you here today.",
+            "choices": [
+              "I came to find information about COVID-19 vaccines.",
+              "I'm looking for resources to share with others.",
+              "I'm concerned about the vaccine.",
+              "I'm curious about this chatbot.",
+              "None of the above."
+            ]
+          }
+        },
+        "flows": {
+          "skip": [],
+          "default": ["WHAT_BROUGHT_YOU_HERE"]
+        },
+        "default_flow": "default",
+        "survey_closing_intent": "SURVEY_CLOSING",
+        "post_survey_intro_intent": "INTRO_DISCUSSION_AFTER_SURVEY"
+      }
+    },
+    "en_ca": {
+      "name": "English",
+      "direction": "ltr",
+      "default": true,
+      "ui_texts": {
+        "FEEDBACK_REQUEST_SELECTED_KP": "How was my answer?",
+        "FEEDBACK_REQUEST_ALT_KP": "I see. Does one of these suggestions better match your original input?",
+        "FEEDBACK_REQUEST_NO_KP": "Does one of these suggestions better match your original input?",
+        "BOT_IS_TYPING": "Bot is typing...",
+        "ENTER_TEXT_HERE": "Enter your text here...",
+        "SUBMIT_TEXT": "Submit",
+        "MAIN_TITLE": "Covid-19 Vaccine Dialog System"
+      },
+      "feedback_options": [
+        {
+          "text": "I didn't ask a question",
+          "intent_label": "FEEDBACK_NO_CONCERN",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": "None of the above",
+          "intent_label": "FEEDBACK_NONE_OF_KPS",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": ".*",
+          "intent_label": "FEEDBACK_NEW_KP",
+          "candidate": false,
+          "kp": true,
+          "location_specific": false
+        }
+      ],
+      "opening_survey": {
+        "enabled": true,
+        "questions": {
+          "WHAT_BROUGHT_YOU_HERE": {
+            "question": "Thanks for joining! Please note that VIRA chatbot is designed for people in the U.S.\nBefore we get started, please select what brought you here today.",
+            "choices": [
+              "I came to find information about COVID-19 vaccines.",
+              "I'm looking for resources to share with others.",
+              "I'm concerned about the vaccine.",
+              "I'm curious about this chatbot.",
+              "None of the above."
+            ]
+          }
+        },
+        "flows": {
+          "skip": [],
+          "default": ["WHAT_BROUGHT_YOU_HERE"]
+        },
+        "default_flow": "default",
+        "survey_closing_intent": "SURVEY_CLOSING",
+        "post_survey_intro_intent": "INTRO_DISCUSSION_AFTER_SURVEY"
+      }
+    },
+    "en_ma": {
+      "name": "English",
+      "direction": "ltr",
+      "default": true,
+      "ui_texts": {
+        "FEEDBACK_REQUEST_SELECTED_KP": "How was my answer?",
+        "FEEDBACK_REQUEST_ALT_KP": "I see. Does one of these suggestions better match your original input?",
+        "FEEDBACK_REQUEST_NO_KP": "Does one of these suggestions better match your original input?",
+        "BOT_IS_TYPING": "Bot is typing...",
+        "ENTER_TEXT_HERE": "Enter your text here...",
+        "SUBMIT_TEXT": "Submit",
+        "MAIN_TITLE": "Covid-19 Vaccine Dialog System"
+      },
+      "feedback_options": [
+        {
+          "text": "I didn't ask a question",
+          "intent_label": "FEEDBACK_NO_CONCERN",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": "None of the above",
+          "intent_label": "FEEDBACK_NONE_OF_KPS",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": ".*",
+          "intent_label": "FEEDBACK_NEW_KP",
+          "candidate": false,
+          "kp": true,
+          "location_specific": false
+        }
+      ],
+      "opening_survey": {
+        "enabled": true,
+        "questions": {
+          "WHAT_BROUGHT_YOU_HERE": {
+            "question": "Thanks for joining! Please note that VIRA chatbot is designed for people in the U.S.\nBefore we get started, please select what brought you here today.",
+            "choices": [
+              "I came to find information about COVID-19 vaccines.",
+              "I'm looking for resources to share with others.",
+              "I'm concerned about the vaccine.",
+              "I'm curious about this chatbot.",
+              "None of the above."
+            ]
+          }
+        },
+        "flows": {
+          "skip": [],
+          "default": ["WHAT_BROUGHT_YOU_HERE"]
+        },
+        "default_flow": "default",
+        "survey_closing_intent": "SURVEY_CLOSING",
+        "post_survey_intro_intent": "INTRO_DISCUSSION_AFTER_SURVEY"
+      }
+    },
+    "es_nc": {
+      "name": "Spanish",
+      "direction": "ltr",
+      "ui_texts": {
+        "FEEDBACK_REQUEST_SELECTED_KP": "¿Cómo estuvo mi respuesta?",
+        "FEEDBACK_REQUEST_ALT_KP": "Ya veo. ¿Alguna de estas sugerencias se corresponde mejor con su aporte original?",
+        "FEEDBACK_REQUEST_NO_KP": "¿Alguna de estas sugerencias se corresponde mejor con su aporte original?",
+        "BOT_IS_TYPING": "Bot is typing...",
+        "ENTER_TEXT_HERE": "Enter your text here...",
+        "SUBMIT_TEXT": "Submit",
+        "MAIN_TITLE": "Covid-19 Vaccine Dialog System"
+      },
+      "feedback_options": [
+        {
+          "text": "No hice ninguna pregunta",
+          "intent_label": "FEEDBACK_NO_CONCERN",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": "Ninguna de las anteriores",
+          "intent_label": "FEEDBACK_NONE_OF_KPS",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": ".*",
+          "intent_label": "FEEDBACK_NEW_KP",
+          "candidate": false,
+          "kp": true,
+          "location_specific": false
+        }
+      ],
+      "opening_survey": {
+        "enabled": true,
+        "questions": {
+          "WHAT_BROUGHT_YOU_HERE": {
+            "question": "¡Gracias por acompañarnos! Por favor, tomen en cuenta que el chatbot VIRA está diseñado para personas en los EE.UU.\nAntes de comenzar, por favor, seleccione la razón por la que ha venido hoy.",
+            "choices": [
+              "Vine a encontrar información acerca de las vacunas contra el COVID-19.",
+              "Busco recursos para compartir con otros.",
+              "Estoy preocupado por la vacuna.",
+              "Tengo curiosidad acerca de este chatbot.",
+              "Ninguno de los anteriores."
+            ]
+          }
+        },
+        "flows": {
+          "skip": [],
+          "default": ["WHAT_BROUGHT_YOU_HERE"]
+        },
+        "default_flow": "default",
+        "survey_closing_intent": "SURVEY_CLOSING",
+        "post_survey_intro_intent": "INTRO_DISCUSSION_AFTER_SURVEY"
+      }
+    },
+    "es_ca": {
+      "name": "Spanish",
+      "direction": "ltr",
+      "ui_texts": {
+        "FEEDBACK_REQUEST_SELECTED_KP": "¿Cómo estuvo mi respuesta?",
+        "FEEDBACK_REQUEST_ALT_KP": "Ya veo. ¿Alguna de estas sugerencias se corresponde mejor con su aporte original?",
+        "FEEDBACK_REQUEST_NO_KP": "¿Alguna de estas sugerencias se corresponde mejor con su aporte original?",
+        "BOT_IS_TYPING": "Bot is typing...",
+        "ENTER_TEXT_HERE": "Enter your text here...",
+        "SUBMIT_TEXT": "Submit",
+        "MAIN_TITLE": "Covid-19 Vaccine Dialog System"
+      },
+      "feedback_options": [
+        {
+          "text": "No hice ninguna pregunta",
+          "intent_label": "FEEDBACK_NO_CONCERN",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": "Ninguna de las anteriores",
+          "intent_label": "FEEDBACK_NONE_OF_KPS",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": ".*",
+          "intent_label": "FEEDBACK_NEW_KP",
+          "candidate": false,
+          "kp": true,
+          "location_specific": false
+        }
+      ],
+      "opening_survey": {
+        "enabled": true,
+        "questions": {
+          "WHAT_BROUGHT_YOU_HERE": {
+            "question": "¡Gracias por acompañarnos! Por favor, tomen en cuenta que el chatbot VIRA está diseñado para personas en los EE.UU.\nAntes de comenzar, por favor, seleccione la razón por la que ha venido hoy.",
+            "choices": [
+              "Vine a encontrar información acerca de las vacunas contra el COVID-19.",
+              "Busco recursos para compartir con otros.",
+              "Estoy preocupado por la vacuna.",
+              "Tengo curiosidad acerca de este chatbot.",
+              "Ninguno de los anteriores."
+            ]
+          }
+        },
+        "flows": {
+          "skip": [],
+          "default": ["WHAT_BROUGHT_YOU_HERE"]
+        },
+        "default_flow": "default",
+        "survey_closing_intent": "SURVEY_CLOSING",
+        "post_survey_intro_intent": "INTRO_DISCUSSION_AFTER_SURVEY"
+      }
+    },
+    "es_ma": {
+      "name": "Spanish",
+      "direction": "ltr",
+      "ui_texts": {
+        "FEEDBACK_REQUEST_SELECTED_KP": "¿Cómo estuvo mi respuesta?",
+        "FEEDBACK_REQUEST_ALT_KP": "Ya veo. ¿Alguna de estas sugerencias se corresponde mejor con su aporte original?",
+        "FEEDBACK_REQUEST_NO_KP": "¿Alguna de estas sugerencias se corresponde mejor con su aporte original?",
+        "BOT_IS_TYPING": "Bot is typing...",
+        "ENTER_TEXT_HERE": "Enter your text here...",
+        "SUBMIT_TEXT": "Submit",
+        "MAIN_TITLE": "Covid-19 Vaccine Dialog System"
+      },
+      "feedback_options": [
+        {
+          "text": "No hice ninguna pregunta",
+          "intent_label": "FEEDBACK_NO_CONCERN",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": "Ninguna de las anteriores",
+          "intent_label": "FEEDBACK_NONE_OF_KPS",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": ".*",
+          "intent_label": "FEEDBACK_NEW_KP",
+          "candidate": false,
+          "kp": true,
+          "location_specific": false
+        }
+      ],
+      "opening_survey": {
+        "enabled": true,
+        "questions": {
+          "WHAT_BROUGHT_YOU_HERE": {
+            "question": "¡Gracias por acompañarnos! Por favor, tomen en cuenta que el chatbot VIRA está diseñado para personas en los EE.UU.\nAntes de comenzar, por favor, seleccione la razón por la que ha venido hoy.",
+            "choices": [
+              "Vine a encontrar información acerca de las vacunas contra el COVID-19.",
+              "Busco recursos para compartir con otros.",
+              "Estoy preocupado por la vacuna.",
+              "Tengo curiosidad acerca de este chatbot.",
+              "Ninguno de los anteriores."
+            ]
+          }
+        },
+        "flows": {
+          "skip": [],
+          "default": ["WHAT_BROUGHT_YOU_HERE"]
+        },
+        "default_flow": "default",
+        "survey_closing_intent": "SURVEY_CLOSING",
+        "post_survey_intro_intent": "INTRO_DISCUSSION_AFTER_SURVEY"
+      }
+    },
+    "es_fc": {
+      "name": "Spanish",
+      "direction": "ltr",
+      "ui_texts": {
+        "FEEDBACK_REQUEST_SELECTED_KP": "¿Cómo estuvo mi respuesta?",
+        "FEEDBACK_REQUEST_ALT_KP": "Ya veo. ¿Alguna de estas sugerencias se corresponde mejor con su aporte original?",
+        "FEEDBACK_REQUEST_NO_KP": "¿Alguna de estas sugerencias se corresponde mejor con su aporte original?",
+        "BOT_IS_TYPING": "Bot is typing...",
+        "ENTER_TEXT_HERE": "Enter your text here...",
+        "SUBMIT_TEXT": "Submit",
+        "MAIN_TITLE": "Covid-19 Vaccine Dialog System"
+      },
+      "feedback_options": [
+        {
+          "text": "No hice ninguna pregunta",
+          "intent_label": "FEEDBACK_NO_CONCERN",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": "Ninguna de las anteriores",
+          "intent_label": "FEEDBACK_NONE_OF_KPS",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": ".*",
+          "intent_label": "FEEDBACK_NEW_KP",
+          "candidate": false,
+          "kp": true,
+          "location_specific": false
+        }
+      ],
+      "opening_survey": {
+        "enabled": true,
+        "questions": {
+          "WHAT_BROUGHT_YOU_HERE": {
+            "question": "¡Gracias por acompañarnos! Por favor, tomen en cuenta que el chatbot VIRA está diseñado para personas en los EE.UU.\nAntes de comenzar, por favor, seleccione la razón por la que ha venido hoy.",
+            "choices": [
+              "Vine a encontrar información acerca de las vacunas contra el COVID-19.",
+              "Busco recursos para compartir con otros.",
+              "Estoy preocupado por la vacuna.",
+              "Tengo curiosidad acerca de este chatbot.",
+              "Ninguno de los anteriores."
+            ]
+          }
+        },
+        "flows": {
+          "skip": [],
+          "default": ["WHAT_BROUGHT_YOU_HERE"]
+        },
+        "default_flow": "default",
+        "survey_closing_intent": "SURVEY_CLOSING",
+        "post_survey_intro_intent": "INTRO_DISCUSSION_AFTER_SURVEY"
+      }
+    },
+    "en_fc": {
+      "name": "English",
+      "direction": "ltr",
+      "default": true,
+      "ui_texts": {
+        "FEEDBACK_REQUEST_SELECTED_KP": "How was my answer?",
+        "FEEDBACK_REQUEST_ALT_KP": "I see. Does one of these suggestions better match your original input?",
+        "FEEDBACK_REQUEST_NO_KP": "Does one of these suggestions better match your original input?",
+        "BOT_IS_TYPING": "Bot is typing...",
+        "ENTER_TEXT_HERE": "Enter your text here...",
+        "SUBMIT_TEXT": "Submit",
+        "MAIN_TITLE": "Covid-19 Vaccine Dialog System"
+      },
+      "feedback_options": [
+        {
+          "text": "I didn't ask a question",
+          "intent_label": "FEEDBACK_NO_CONCERN",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": "None of the above",
+          "intent_label": "FEEDBACK_NONE_OF_KPS",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": ".*",
+          "intent_label": "FEEDBACK_NEW_KP",
+          "candidate": false,
+          "kp": true,
+          "location_specific": false
+        }
+      ],
+      "opening_survey": {
+        "enabled": true,
+        "questions": {
+          "WHAT_BROUGHT_YOU_HERE": {
+            "question": "Thanks for joining! Please note that VIRA chatbot is designed for people in the U.S.\nBefore we get started, please select what brought you here today.",
+            "choices": [
+              "I came to find information about COVID-19 vaccines.",
+              "I'm looking for resources to share with others.",
+              "I'm concerned about the vaccine.",
+              "I'm curious about this chatbot.",
+              "None of the above."
+            ]
+          }
+        },
+        "flows": {
+          "skip": [],
+          "default": ["WHAT_BROUGHT_YOU_HERE"]
+        },
+        "default_flow": "default",
+        "survey_closing_intent": "SURVEY_CLOSING",
+        "post_survey_intro_intent": "INTRO_DISCUSSION_AFTER_SURVEY"
+      }
+    },
+    "en_sa": {
+      "name": "English",
+      "direction": "ltr",
+      "default": true,
+      "ui_texts": {
+        "FEEDBACK_REQUEST_SELECTED_KP": "How was my answer?",
+        "FEEDBACK_REQUEST_ALT_KP": "I see. Does one of these suggestions better match your original input?",
+        "FEEDBACK_REQUEST_NO_KP": "Does one of these suggestions better match your original input?",
+        "BOT_IS_TYPING": "Bot is typing...",
+        "ENTER_TEXT_HERE": "Enter your text here...",
+        "SUBMIT_TEXT": "Submit",
+        "MAIN_TITLE": "Covid-19 Vaccine Dialog System"
+      },
+      "feedback_options": [
+        {
+          "text": "I didn't ask a question",
+          "intent_label": "FEEDBACK_NO_CONCERN",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": "None of the above",
+          "intent_label": "FEEDBACK_NONE_OF_KPS",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": ".*",
+          "intent_label": "FEEDBACK_NEW_KP",
+          "candidate": false,
+          "kp": true,
+          "location_specific": false
+        }
+      ],
+      "opening_survey": {
+        "enabled": true,
+        "questions": {
+          "WHAT_BROUGHT_YOU_HERE": {
+            "question": "Thanks for joining! Please note that VIRA chatbot is designed for people in the U.S.\nBefore we get started, please select what brought you here today.",
+            "choices": [
+              "I came to find information about COVID-19 vaccines.",
+              "I'm looking for resources to share with others.",
+              "I'm concerned about the vaccine.",
+              "I'm curious about this chatbot.",
+              "None of the above."
+            ]
+          }
+        },
+        "flows": {
+          "skip": [],
+          "default": ["WHAT_BROUGHT_YOU_HERE"]
+        },
+        "default_flow": "default",
+        "survey_closing_intent": "SURVEY_CLOSING",
+        "post_survey_intro_intent": "INTRO_DISCUSSION_AFTER_SURVEY"
+      }
+    },
+     "es_sa": {
+      "name": "Spanish",
+      "direction": "ltr",
+      "ui_texts": {
+        "FEEDBACK_REQUEST_SELECTED_KP": "¿Cómo estuvo mi respuesta?",
+        "FEEDBACK_REQUEST_ALT_KP": "Ya veo. ¿Alguna de estas sugerencias se corresponde mejor con su aporte original?",
+        "FEEDBACK_REQUEST_NO_KP": "¿Alguna de estas sugerencias se corresponde mejor con su aporte original?",
+        "BOT_IS_TYPING": "Bot is typing...",
+        "ENTER_TEXT_HERE": "Enter your text here...",
+        "SUBMIT_TEXT": "Submit",
+        "MAIN_TITLE": "Covid-19 Vaccine Dialog System"
+      },
+      "feedback_options": [
+        {
+          "text": "No hice ninguna pregunta",
+          "intent_label": "FEEDBACK_NO_CONCERN",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": "Ninguna de las anteriores",
+          "intent_label": "FEEDBACK_NONE_OF_KPS",
+          "candidate": true,
+          "kp": false,
+          "location_specific": false
+        },
+        {
+          "text": ".*",
+          "intent_label": "FEEDBACK_NEW_KP",
+          "candidate": false,
+          "kp": true,
+          "location_specific": false
+        }
+      ],
+      "opening_survey": {
+        "enabled": true,
+        "questions": {
+          "WHAT_BROUGHT_YOU_HERE": {
+            "question": "¡Gracias por acompañarnos! Por favor, tomen en cuenta que el chatbot VIRA está diseñado para personas en los EE.UU.\nAntes de comenzar, por favor, seleccione la razón por la que ha venido hoy.",
+            "choices": [
+              "Vine a encontrar información acerca de las vacunas contra el COVID-19.",
+              "Busco recursos para compartir con otros.",
+              "Estoy preocupado por la vacuna.",
+              "Tengo curiosidad acerca de este chatbot.",
+              "Ninguno de los anteriores."
+            ]
+          }
+        },
+        "flows": {
+          "skip": [],
+          "default": ["WHAT_BROUGHT_YOU_HERE"]
+        },
+        "default_flow": "default",
+        "survey_closing_intent": "SURVEY_CLOSING",
+        "post_survey_intro_intent": "INTRO_DISCUSSION_AFTER_SURVEY"
+      }
+    }
+  },
+  "keypoint_analysis": {
+    "limit": 5000
+  },
+  "kp_matching": {
+    "confidence": 0.2
+  },
+  "intent_classifier": {
+    "confidence": 0.4
+  },
+  "candidate_scorer": {
+    "base_dir": "",
+    "model_name": "random",
+    "last_usage_factors": {
+      "poly_model_huge_reddit": {
+        "response_db": 0.5,
+        "canned_text": 0.9
+      },
+      "blender_90M" : {
+        "response_db": 3,
+        "canned_text": 1.5
+      },
+      "random": {
+        "response_db": 0.5,
+        "canned_text": 0.9
+      }
+    }
+  },
+  "advisory_mode": {
+    "enabled": true,
+    "candidates": 3
+  },
+
+  "dialog_assessment": {
+    "operators": [
+      "is_user",
+      "is_system",
+      "has_kp(kp)",
+      "is_feedback",
+      "is_not_feedback",
+      "pos_feedback",
+      "neg_feedback",
+      "none_of_kps_intent",
+      "no_concern_intent",
+      "has_no_kp",
+      "has_feedback",
+      "is_not_intro",
+      "is_last_message(message_id, n_messages)",
+      "is_not_default_intent",
+      "is_default_intent",
+      "is_profanity",
+      "is_not_profanity"
+    ],
+    "indicators": {
+      "basic_kp_indicators": {
+        "kp_prediction_thumbs_up": [
+          ["is_user", "has_kp", "is_not_feedback", "is_not_profanity"],
+          ["is_system", "pos_feedback"]
+        ],
+        "kp_prediction_thumbs_down": [
+          ["is_user", "has_kp", "is_not_feedback", "is_not_profanity"],
+          ["is_system", "neg_feedback"]
+        ],
+        "kp_fallback_thumbs_up": [
+          ["is_user", "is_not_feedback", "is_not_profanity"],
+          ["is_system", "neg_feedback"],
+          ["is_user", "has_kp", "is_feedback"],
+          ["is_system", "pos_feedback"]
+        ],
+        "kp_fallback_thumbs_down": [
+          ["is_user", "is_not_feedback", "is_not_profanity"],
+          ["is_system", "neg_feedback"],
+          ["is_user", "has_kp", "is_feedback"],
+          ["is_system", "neg_feedback"]
+        ]
+      },
+      "basic_global_indicators": {
+
+        "user_input_turns": [
+          ["is_user", "is_not_feedback","is_not_intro"],
+          ["is_system"]
+        ],
+        "user_input_turns_w_feedback": [
+          ["is_user", "is_not_feedback","is_not_intro", "is_not_default_intent"],
+          ["is_system","has_feedback"]
+        ],
+        "user_input_turns_thumbs_up": [
+          ["is_user", "is_not_feedback"],
+          ["is_system","pos_feedback"]
+        ],
+        "user_input_turns_thumbs_down": [
+          ["is_user", "is_not_feedback", "is_not_default_intent"],
+          ["is_system","neg_feedback"]
+        ],
+
+        "Intent_based_response_all": [
+          ["is_user", "is_not_feedback", "is_not_intro","is_not_default_intent"],
+          ["is_system","has_no_kp"]
+        ],
+        "Intent_based_response_w_feedback": [
+          ["is_user", "is_not_feedback", "is_not_intro","is_not_default_intent"],
+          ["is_system","has_feedback","has_no_kp"]
+        ],
+        "Intent_based_response_thumbs_up": [
+          ["is_user", "is_not_feedback", "is_not_intro","is_not_default_intent"],
+          ["is_system","pos_feedback","has_no_kp"]
+        ],
+        "Intent_based_response_thumbs_down": [
+          ["is_user", "is_not_feedback", "is_not_intro","is_not_default_intent"],
+          ["is_system","neg_feedback","has_no_kp"]
+        ],
+        "kp_based_response_w_feedback": [
+          ["is_user", "has_kp", "is_not_feedback"],
+          ["is_system","has_feedback", "has_kp"]
+        ],
+        "kp_based_response_all": [
+          ["is_user", "has_kp", "is_not_feedback"],
+          ["is_system", "has_kp"]
+        ],
+        "kp_based_response_thumbs_up": [
+          ["is_user", "has_kp", "is_not_feedback"],
+          ["is_system","pos_feedback", "has_kp"]
+        ],
+        "kp_based_response_thumbs_down": [
+          ["is_user", "has_kp", "is_not_feedback"],
+          ["is_system","neg_feedback", "has_kp"]
+        ],
+        "clarification_response": [
+          ["is_user", "is_default_intent", "is_not_feedback"],
+          ["is_system"]
+        ],
+
+        "Fallback_menu_responses_w_feedback": [
+          ["is_user", "is_not_feedback"],
+          ["is_system"],
+          ["is_user", "is_feedback"]
+        ],
+        "KP_choice_feedback_w_feedback": [
+          ["is_user", "is_not_feedback"],
+          ["is_system"],
+          ["is_user", "has_kp", "is_feedback"],
+          ["is_system","has_feedback"]
+        ],
+        "KP_choice_feedback_thumbs_up": [
+          ["is_user", "is_not_feedback"],
+          ["is_system"],
+          ["is_user", "has_kp", "is_feedback"],
+          ["is_system","pos_feedback"]
+        ],
+        "KP_choice_feedback_thumbs_down": [
+          ["is_user", "is_not_feedback"],
+          ["is_system"],
+          ["is_user", "has_kp", "is_feedback"],
+          ["is_system","neg_feedback"]
+        ],
+        "none_of_above_feedback": [
+          ["is_user", "is_not_feedback"],
+          ["is_system"],
+          ["is_user", "none_of_kps_intent", "is_feedback"]
+        ],
+        "no_concern_feedback": [
+          ["is_user", "is_not_feedback"],
+          ["is_system"],
+          ["is_user", "no_concern_intent", "is_feedback"]
+        ],
+        "KP_choice_feedback_all": [
+          ["is_user", "is_not_feedback"],
+          ["is_system"],
+          ["is_user", "has_kp", "is_feedback"]
+        ],
+        "profanity": [
+          ["is_user", "is_profanity"]
+        ]
+      },
+      "derived_addition_kp_indicators": {
+        "kp_thumbs_up": ["kp_prediction_thumbs_up", "kp_fallback_thumbs_up"],
+        "kp_thumbs_down": ["kp_prediction_thumbs_down", "kp_fallback_thumbs_down"],
+        "kp_prediction": ["kp_prediction_thumbs_up", "kp_prediction_thumbs_down"],
+        "kp_fallback": ["kp_fallback_thumbs_up", "kp_fallback_thumbs_down"],
+        "kp_instance": ["kp_prediction_thumbs_up", "kp_prediction_thumbs_down", "kp_fallback_thumbs_up", "kp_fallback_thumbs_down"]
+      },
+      "derived_addition_global_indicators": {
+        "all_turns_feedback_possible": ["kp_based_response_all", "Intent_based_response_all"],
+        "all_fallback_menu_opens": ["user_input_turns_thumbs_down", "clarification_response"]
+      },
+      "derived_division_kp_indicators": {
+        "precision": ["kp_prediction_thumbs_up", "kp_prediction"],
+        "recall": ["kp_prediction_thumbs_up", "kp_thumbs_up"],
+        "precision-top-k": ["kp_thumbs_up", "kp_instance"]
+      },
+      "derived_division_global_indicators": {
+        "all_turns_pos_fraction": ["user_input_turns_thumbs_up", "user_input_turns_w_feedback"],
+        "all_turns_feedback_of_can_have_feedback": ["user_input_turns_w_feedback","all_turns_feedback_possible"],
+        "intent_based_response_pos_fraction": ["Intent_based_response_thumbs_up", "Intent_based_response_w_feedback"],
+        "kp_based_response_pos_fraction": [ "kp_based_response_thumbs_up", "kp_based_response_w_feedback"],
+        "feedback_kp_choice_pos_fraction": [ "KP_choice_feedback_thumbs_up", "KP_choice_feedback_w_feedback"],
+        "kp_based_response_all_of_total": ["kp_based_response_all","user_input_turns"],
+        "intent_based_response_w_feedback_of_all_intent_based": ["Intent_based_response_w_feedback", "Intent_based_response_all"],
+        "intent_based_response_all_of_total":  ["Intent_based_response_all", "user_input_turns"],
+        "kp_based_response_w_feedback_of_all_kp_based": [ "kp_based_response_w_feedback", "kp_based_response_all"],
+        "asking_clarification_of_total" : [ "clarification_response", "user_input_turns"],
+        "fallback_menu_of_total": ["all_fallback_menu_opens", "user_input_turns"],
+        "fallback_menu_feedback_of_all_opens": ["Fallback_menu_responses_w_feedback","all_fallback_menu_opens"],
+        "fallback_kp_choice_w_feedback_of_all_kp_choice": [ "KP_choice_feedback_w_feedback", "KP_choice_feedback_all"],
+        "none_of_the_above_of_feedback_menu_total": [ "none_of_above_feedback", "Fallback_menu_responses_w_feedback"],
+        "no_concern_of_feedback_menu_total": ["no_concern_feedback", "Fallback_menu_responses_w_feedback"],
+        "feedback_kp_choice_all_of_feedback_menu_total": ["KP_choice_feedback_all", "Fallback_menu_responses_w_feedback"]
+      }
+    },
+    "count_indicators": [
+      "basic_kp_indicators",
+      "basic_global_indicators",
+      "derived_kp_indicators"
+    ]
+  }
+}

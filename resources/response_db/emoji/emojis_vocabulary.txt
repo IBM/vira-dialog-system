@@ -1,0 +1,19 @@
+Use this file to copy and paste emojis into the canned text, response db and survey.
+The emojis here are copied from  https://emojipedia.org/ and https://unicode.org/emoji/charts/full-emoji-list.html
+Feel free to add more by coping-and-pasting from these or other websites.
+
+Notes:
+1. Some emojis look different on vaxchat and on WhatsApp. Check on both platforms.
+2. The sun emoji - ☀ - looks fine on WhatsApp (yellow) but a little strange on vaxchat (white).
+
+Vocabulary:
+🦠
+🩹 🦺 🏥
+📅
+❓
+✅ ✔
+☀ 🌞 🌤
+💜 🙏
+🤔 🤨 😷 🙄
+🌐
+📄 📃

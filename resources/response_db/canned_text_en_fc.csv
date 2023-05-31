@@ -1,0 +1,72 @@
+﻿intent_type,position,arg_type,tone,target,persona,trust,emoji,text
+POSITIVE_REACTION,full,general,general,general,general,high trust,2-Happy,You're welcome. What else is on your mind?
+POSITIVE_REACTION,full,general,general,general,general,high trust,1-Neutral,What else concerns you?
+POSITIVE_REACTION,full,general,general,general,general,high trust,1-Neutral,What else is on your mind?
+POSITIVE_REACTION,prefix,general,general,Indigenous,gratitude/approval/joy/caring/optimism/relief/excitement/amusement,high trust,2-Happy,We got this.
+POSITIVE_REACTION,prefix,general,empathetic,general,gratitude/approval/joy/caring/optimism/relief/excitement/amusement,high trust,6-Excited,Thanks for doing your part!
+NEGATIVE_REACTION,prefix,general,general,general,general,high trust,1-Neutral,Gotcha. 
+NEGATIVE_REACTION,prefix,general,sassy,general,general,high trust,4-Confused,You sure about that? 
+CONCERN,prefix,factual,general,Indigenous,conscientioussness,high trust,7-I have an idea!,We all need to do our part.
+QUERY,prefix,general,empathetic,general,general,high trust,2-Happy,Thanks for asking!
+CONCERN,suffix,general,general,general,general,high trust,1-Neutral,Hope that made sense!
+POSITIVE_REACTION,full,general,general,general,general,low trust,6-Excited,Hope this helps. What else would you like to talk about?
+NEGATIVE_REACTION,full,general,general,general,general,low trust,4-Confused,Could you please expand? 🙄
+FEEDBACK_NONE_OF_KPS,full,general,general,general,general,low trust,4-Confused,Hmm... perhaps you can try to rephrase?
+NEGATIVE_REACTION,full,general,self-depricating,general,general,low trust,2-Happy,Thanks for your feedback. What else concerns you?
+NEGATIVE_REACTION,full,general,self-depricating,general,general,low trust,2-Happy,Thanks for your feedback. What else is on your mind?
+POSITIVE_REACTION,prefix,general,general,general,general,low trust,9-Relieved,Glad we're getting on the same page. 
+NEGATIVE_REACTION,prefix,factual,sassy,general,anger/disgust/annoyance/disapproval,low trust,5-One moment,"Hold on there, let's look at some evidence."
+FEEDBACK_NEW_KP,prefix,general,general,general,narcicissm,low trust,1-Neutral,Thanks for your feedback.
+CONCERN,prefix,general,empathetic,general,narcissism,low trust,6-Excited,I hear you.
+CONCERN,prefix,general,general,general,general,low trust,5-One moment,Allow me to respond.
+QUERY,prefix,general,general,general,general,low trust,6-Excited,Good question! 
+CONCERN,prefix,general,general,general,general,low trust,7-I have an idea!,This is a really important point for many people.
+CONCERN,suffix,general,general,general,gratitude/approval/joy/caring/optimism/relief/excitement/amusement,low trust,4-Confused,I hope you understand the point I was trying to make.
+QUERY,suffix,general,general,general,general,low trust,1-Neutral,Ask another question.
+QUERY,suffix,factual,empathetic,general,general,low trust,5-One moment,You can talk with your healthcare provider to learn more.
+QUERY,suffix,general,empathetic,general,narcicissm,low trust,2-Happy,Good questions!
+POSITIVE_REACTION,full,general,general,general,general,medium trust,1-Neutral,Good. What else would you like to ask?
+FAREWELL,full,general,general,general,general,medium trust,2-Happy,"Thanks, have a good day!"
+FAREWELL,full,general,empathetic,general,general,medium trust,2-Happy,Hope this helped! Stay safe 😷
+FAREWELL,full,general,general,general,general,medium trust,2-Happy,"Thanks, take care! 😷"
+CODE_SUBMITTED,full,general,general,general,general,medium trust,1-Neutral,The code to submit to Appen is <CODE>. I would be happy to continue the conversation.
+DEFAULT,full,default,general,general,general,medium trust,4-Confused,Could you please rephrase your last comment? 🤔
+DEFAULT,full,default,general,general,general,medium trust,4-Confused,Could you please rephrase?
+DEFAULT_WITH_FEEDBACK,full,default,general,general,general,medium trust,4-Confused,"I'm sorry, but I'm not sure I understood your point 🤨"
+FEEDBACK_NO_CONCERN,full,general,general,general,general,medium trust,1-Neutral,Thanks for your feedback. What else would you like to discuss?
+GREETING,full,general,general,general,general,medium trust,1-Neutral,Hey! I can address your questions. What's on your mind?
+GREETING,full,general,general,general,general,medium trust,1-Neutral,"Hello, what are your thoughts about the COVID-19 vaccine?"
+INTRO_DISCUSSION,full,general,general,general,general,medium trust,1-Neutral,Hi! What do you want to know about COVID-19 vaccines?
+INTRO_DISCUSSION,full,general,formal,general,general,medium trust,1-Neutral,Thanks for joining! What questions do you have?
+INTRO_DISCUSSION,full,general,formal,general,general,medium trust,1-Neutral,Thanks for joining! Ask away.
+INTRO_DISCUSSION,full,general,general,general,general,medium trust,1-Neutral,Hey! Ask me your vaccine questions.
+INTRO_DISCUSSION,full,general,general,general,general,medium trust,1-Neutral,How can I help?
+INTRO_DISCUSSION,full,general,general,general,general,medium trust,1-Neutral,"Hey there, what are your questions?"
+DEFAULT_WITH_FEEDBACK,full,general,general,general,general,medium trust,4-Confused,"Sorry, not sure I got what you're asking."
+SAME_KP_TWICE_IN_A_ROW,prefix,general,general,general,general,low trust,5-One moment,Sorry if I'm repeating myself -
+SAME_KP_TWICE_IN_A_ROW,prefix,general,general,general,general,low trust,5-One moment,I apologize if this is repetitive.
+FEEDBACK_NONE_OF_KPS_TWO_IN_A_ROW,full,general,general,general,general,low trust,4-Confused,Sorry...Perhaps try asking a different question?
+FEEDBACK_NONE_OF_KPS_TWO_IN_A_ROW,full,general,general,general,general,low trust,4-Confused,Still not sure...Want to try another question?
+NO_OTHER_CONCERN,full,general,general,general,general,low trust,1-Neutral,"Ok. If you have any other concerns, let me know. Otherwise, take care!"
+NO_OTHER_CONCERN,full,general,general,general,general,low trust,1-Neutral,"Got it. If you think of any more questions, I'm here to help. Stay safe!"
+POSITIVE_REACTION,prefix,general,general,general,general,low trust,2-Happy,"First of all, you're welcome."
+POSITIVE_REACTION,prefix,general,general,general,general,low trust,6-Excited,"First, hope this helps. In addition, "
+FAREWELL,suffix,general,general,general,general,medium trust,2-Happy,"Thanks, take care!"
+FAREWELL,suffix,general,empathetic,general,general,medium trust,2-Happy,Hope this helped! Stay safe.
+FAREWELL,suffix,general,general,general,general,medium trust,2-Happy,"Thanks, have a good day!"
+GREETING,prefix,general,general,general,general,medium trust,1-Neutral,"Hi,"
+GREETING,prefix,general,general,general,general,medium trust,1-Neutral,"Hello,"
+NEGATIVE_REACTION,prefix,general,self-depricating,general,general,low trust,1-Neutral,I understand.
+NEGATIVE_REACTION,prefix,general,self-depricating,general,general,low trust,1-Neutral,Thanks for your feedback.
+POSITIVE_REACTION,suffix,general,general,general,general,high trust,1-Neutral,What else is on your mind?
+POSITIVE_REACTION,suffix,general,general,general,general,high trust,1-Neutral,What else concerns you?
+CONCERN,prefix,general,general,general,general,low trust,1-Neutral,
+PROFANITY,full,general,general,general,general,low trust,4-Confused,"Sorry, not sure I understand what you mean. Do have you any concerns regarding COVID-19 vaccinations?"
+QUERY,prefix,general,general,general,general,low trust,1-Neutral,
+SURVEY_ORIGIN_QUESTION,full,general,general,general,general,medium trust,1-Neutral,Hello! Can I ask what brought you here today?
+SURVEY_CLOSING,full,general,general,general,general,medium trust,1-Neutral,Thanks for providing this information! 🙏
+INTRO_DISCUSSION_AFTER_SURVEY,full,general,general,general,general,medium trust,1-Neutral,What do you want to know about COVID-19 vaccines?
+INTRO_DISCUSSION_AFTER_SURVEY,full,general,formal,general,general,medium trust,1-Neutral,What questions do you have?
+INTRO_DISCUSSION_AFTER_SURVEY,full,general,general,general,general,medium trust,1-Neutral,Ask me your vaccine questions.
+INTRO_DISCUSSION_AFTER_SURVEY,full,general,general,general,general,medium trust,1-Neutral,How can I help?
+INTRO_DISCUSSION_AFTER_SURVEY,full,general,general,general,general,medium trust,1-Neutral,What are your questions?

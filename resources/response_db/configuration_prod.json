@@ -1,0 +1,8 @@
+{
+  "kp_matching": {
+    "endpoint": "http://keypoint-matching-bot-mc:8000/score/"
+  },
+  "intent_classifier": {
+    "endpoint": "http://intent-service:8000/score/"
+  }
+}

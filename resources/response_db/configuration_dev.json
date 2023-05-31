@@ -1,0 +1,8 @@
+{
+  "kp_matching": {
+    "endpoint": "https://staging-keypoint-matching-bot-mc.debater.res.ibm.com/score/"
+  },
+  "intent_classifier": {
+    "endpoint": "https://staging-intent-service.debater.res.ibm.com/score/"
+  }
+}

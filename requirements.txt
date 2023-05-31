@@ -1,0 +1,11 @@
+numpy
+pandas
+fastapi
+uvicorn[standard]
+requests
+pydantic
+starlette
+deep_chainmap
+spacy
+pymongo
+tqdm
