@@ -1,4 +1,4 @@
-# VIRA Dialog Manager
+# VIRA Dialog System
 This repository contains code and data to build the dialog manager of the VIRA chatbot, addressing concerns surrounding COVID-19 vaccines.
 
 ## Setup
@@ -38,11 +38,28 @@ python db_utils.py -conf-canned-db
 2. Launch VIRA using ```python main.py```
 3. Test VIRA with a simple user question using ```python sanity.py```
 
-
 ## Deploying VIRA in a Containerized Management System
-1. Build a docker image using `docker build . -t vira-system`
+
+### Building VIRA Dialog System's Docker Image
+Build a docker image using:
+```shell
+docker build . -t vira-system
+```
+
+### Dokcer Configuration
+Running the image requires two setup steps:
+- Passing an environment variable VIRA_API_KEY
+- Mounting the files `db_credentials.json` and `certificate.crt` to `/app/resources/db/`
+
+### Running Locally
+Run the image using:
+```shell
+docker run -p 8000:8000 -it -e VIRA_API_KEY --mount type=bind,source=resources/db/db_credentials.json,target=/app/resources/db/db_credentials.json --mount type=bind,source=resources/db/certificate.crt,target=/app/resources/db/certificate.crt vira-system
+```
+## Running in a Containerized Management System
+1. Build the docker as shown above.
 2. Push the image to a docker registry of choice.
-3. Setup a deployment file in which the the files: `db_credentials.json` and `certificate.crt` are mounted to `/app/resources/db/`
+3. Setup a deployment file in which `VIRA_API_KEY` is defined and the files: `db_credentials.json` and `certificate.crt` are mounted to `/app/resources/db/`
 4. Deploy the image on your platform using a link to the image on the docker registry. 
 
 ## License
