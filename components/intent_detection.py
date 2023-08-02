@@ -3,13 +3,12 @@
 # SPDX-License-Identifier: Apache2.0
 #
 
-from abc import abstractmethod
 import re
-import numpy as np
+from abc import abstractmethod
+
+from assessment.operators import none_of_kps_intent, has_kp
 from tools.db_manager import DBManager
 from tools.service_utils import get_scores
-from assessment.operators import none_of_kps_intent, has_kp
-
 
 what_else_regex = re.compile(r'what (else|other)[\w\d\s]*\?$', re.IGNORECASE)
 
@@ -102,12 +101,10 @@ class IntentClassifierClient:
         self.url = configuration.get_intent_classifier_endpoint()
         self.confidence = configuration.get_intent_classifier_confidence()
 
-    # TODO : context should be list
     def apply(self, user_arg, disable_cache):
-        scores = np.array(get_scores(self.url, [[user_arg]], 1, disable_cache)).ravel()
-        max_idx = np.argmax(scores)
-        if scores[max_idx] > self.confidence:
-            return create_intent(label=intent_classes[max_idx], score=scores[max_idx], source='classifier')
+        intents, intent_scores = get_scores(self.url, user_arg, disable_cache)
+        if intent_scores[0] > self.confidence:
+            return create_intent(label=intents[0], score=intent_scores[0], source='classifier')
         return create_intent(intent_classes[-1], score=1, source='classifier')
 
 

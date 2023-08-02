@@ -241,9 +241,9 @@ class DialogManager(metaclass=Singleton):
 
                             # determine the number of kps and get the top k
                             n_candidates = self.advisory_mode['candidates']
-                            con_kps, con_kp_scores = self.kp_matcher.get_top_k_kps(user_arg, n_candidates,
-                                                                                   disable_cache,
-                                                                                   response_db.get_con_kps())
+                            con_kps, con_kp_scores = self.kp_matcher.get_top_k_kps(arg=user_arg, k=n_candidates,
+                                                                                   disable_cache=disable_cache,
+                                                                                   response_db_kps=response_db.get_con_kps())
 
                             # if our top kp is above the confidence threshold
                             # we will use it in the response

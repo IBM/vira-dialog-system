@@ -25,31 +25,17 @@ class KpMatching:
         return score > self.confidence
 
     # deleting ids not in response db
-    def remove_kps_not_in_response_db(self, kp_scores, response_db_kps):
-        kps = self.get_kps([i for i in range(len(kp_scores))])
+    def remove_kps_not_in_response_db(self, kps, kp_scores, response_db_kps):
         not_supported_ids = [i for i, kp in enumerate(kps) if kp not in response_db_kps]
-        kp_scores = [kp_scores[i] if i not in not_supported_ids else 0 for i in range(len(kps))]
-        return kp_scores
+        kps = [kp for i, kp in enumerate(kps) if i not in not_supported_ids]
+        kp_scores = [kp_score for i, kp_score in enumerate(kp_scores) if i not in not_supported_ids]
+        return kps, kp_scores
 
     def get_top_k_kps(self, arg, k, disable_cache, response_db_kps=None):
-        kp_scores = np.array(get_scores(self.url, [[arg]], 1, disable_cache)).ravel()
+        kps, kp_scores = get_scores(self.url, arg, disable_cache)
         if response_db_kps is not None:
-            kp_scores = self.remove_kps_not_in_response_db(kp_scores, response_db_kps)
-        kp_ids = np.array(kp_scores).argsort()[::-1][:k]
-        return self.get_kps(kp_ids), [kp_scores[i] for i in kp_ids]
-
-    def get_top_k_kps_multi(self, args, k, batch_size, disable_cache):
-        kp_scores = np.array(get_scores(self.url, [[arg] for arg in args], batch_size, disable_cache))
-        kp_ids = np.flip(kp_scores.argsort(axis=1), axis=1)[:, :k]
-        return np.take(self.idx_to_label, kp_ids), [s[kp_id][0] for s, kp_id in zip(kp_scores, kp_ids)]
-
-    def get_top_kp(self, arg, disable_cache):
-        kps, scores = self.get_top_k_kps(arg, 1, disable_cache)
-        return kps[0]
-
-    def get_top_kp_multi(self, args, disable_cache):
-        kps, scores = self.get_top_k_kps_multi(args, 1, 1000, disable_cache)
-        return kps.ravel()
+            kps, kp_scores = self.remove_kps_not_in_response_db(kps, kp_scores, response_db_kps)
+        return kps[:k], kp_scores[:k]
 
     # matches between a given list of args and the existing kp list
     # for each arg, returns:
